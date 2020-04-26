@@ -26,51 +26,51 @@ const userSchema = new mongoose.Schema({
     required: [true, 'Por favor ingresa tu numero documento de identidad'],
     unique: [
       true,
-      'Ya hay un usuario registrado con ese número de documento de identidad',
+      "Ya hay un usuario registrado con ese número de documento de identidad"
     ],
   },
   documentType: {
     type: String,
-    required: [true, 'Por favor escoge tu tipo de documento'],
+    required: [true, 'Por favor escoge tu tipo de documento']
   },
   citizenIdIssuedAt: {
     type: Date,
-    required: [true, 'Por favor ingresa la fecha de expedición de tu cédula'],
+    required: [true, 'Por favor ingresa la fecha de expedición de tu cédula']
   },
   email: {
     type: String,
     required: [true, 'Por favor ingresa tu email'],
     lowercase: true,
-    unique: true,
-    validate: [validator.isEmail, 'Por favor ingresa un email válido'],
+    unique: [true, 'Ya hay un usuario registrado con ese email'],
+    validate: [validator.isEmail, 'Por favor ingresa un email válido']
   },
   phoneNumber: {
     type: Number,
     required: [true, 'Por favor ingresa el número de tu móvil'],
-    unique: true,
+    unique: [true, 'Ya hay un usuario registrado con ese número de móvil']
   },
   homeAddress: {
     type: String,
-    required: [true, 'Por favor ingresa tu dirección de residencia'],
+    required: [true, 'Por favor ingresa tu dirección de residencia']
   },
   zipCode: {
     type: Number,
-    required: [true, 'Por favor ingresa tu código postal'],
+    required: [true, 'Por favor ingresa tu código postal']
   },
   photo: {
     type: String,
-    default: 'default.jpg',
+    default: 'default.jpg'
   },
   role: {
     type: String,
     enum: ['user', 'admin'],
-    default: 'user',
+    default: 'user'
   },
   password: {
     type: String,
     required: [true, 'por favor ingresa una contraseña'],
     minlength: 8,
-    select: false,
+    select: false
   },
   confirmPassword: {
     type: String,

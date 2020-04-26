@@ -15,9 +15,19 @@ const handleCastErrorDB = err => {
 }
 
 const handleDuplicateFieldsDB = err => {
-    const value = err.errmsg.match(/(["'])(\\?.)*?\1/)[0];
+    // const value = err.errmsg.match(/(["'])(\\?.)*?\1/)[0];
+    let message;
+    if (err.keyValue.citizenCardId) {
+        message = `Este número de documento de identidad ya fue registrado`
+    }
+    if (err.keyValue.email) {
+        message = `Este email ya fue registrado`
+    }
+    if (err.keyValue.phoneNumber) {
+        message = `Este número de móvil ya fue registrado`
+    }
 
-    const message = `Duplicate field value: ${value}. Please use another value`
+    // message = `Duplicate field value: ${value}. Please use another value`
     return new AppError(message, 400)
 }
 
@@ -88,7 +98,8 @@ const sendErrorProd = (err, req, res) => {
 
 
 module.exports = (err, req, res, next) => {
-
+    // console.log(err)
+    // console.log('err errorController 95')
     err.statusCode = err.statusCode || 500;
     err.status = err.status || 'error';
 

@@ -38,29 +38,14 @@ if (signupForm) {
     const nationality = document.getElementById('nationality').value;
     const citizenCardId = document.getElementById('citizenCardId').value;
     const documentType = document.getElementById('documentType').value;
-    const citizenIdIssuedAt = document.getElementById('citizenIdIssuedAt')
-      .value;
+    const citizenIdIssuedAt = document.getElementById('citizenIdIssuedAt').value;
     const email = document.getElementById('email').value;
     const phoneNumber = document.getElementById('phoneNumber').value;
     const homeAddress = document.getElementById('homeAddress').value;
     const zipCode = document.getElementById('zipCode').value;
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
-    console.log(
-      fullName,
-      dateofbirth,
-      gender,
-      nationality,
-      citizenCardId,
-      documentType,
-      citizenIdIssuedAt,
-      email,
-      phoneNumber,
-      homeAddress,
-      zipCode,
-      password,
-      confirmPassword
-    );
+
     signup(
       fullName,
       dateofbirth,
@@ -139,8 +124,8 @@ if (updatePasswordForm) {
 
 // the alertMessage variable gets from the body the sattribute data-alert which is base.pug file
 const alertMessage = document.querySelector('body').dataset.alert;
-console.log(alertMessage)
-if (alertMessage) showAlert('success', alertMessage, 10);
+
+if (alertMessage) showAlert('success', alertMessage, 120);
 
 // displays the overlap and popups the passwordchage form
 $('#show').on('click', function () {
@@ -178,6 +163,4 @@ function readURL(input) {
 
 $('#photo').change(function () {
   readURL(this);
-  console.log('this');
-  console.log(this);
 });

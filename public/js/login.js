@@ -33,8 +33,6 @@ export const login = async (email, password, type) => {
       }, 1500);
     }
   } catch (err) {
-    console.log(err.response.data)
-    console.log(err.response)
     showAlert('error', err.response.data.message);
   }
 };

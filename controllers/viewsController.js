@@ -48,7 +48,7 @@ exports.emailConfirmed = catchAsync(async (req, res, next) => {
   });
 
 
-  const fName = user.firstName.split(' ')[0];
+  const fName = user.fullName.split(' ')[0];
 
   res.status(200).redirect(`/me/?alert=emailConfirmed&name=${fName}`);
 });
@@ -62,8 +62,6 @@ exports.getLoginForm = (req, res, next) => {
 };
 
 exports.getUserDataForm = (req, res, next) => {
-  console.log('getUserDataForm')
-  console.log(req.user)
   res.status(200).render('userdataform', {
     title: 'Modificar usuario',
     user: req.user

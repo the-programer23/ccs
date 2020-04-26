@@ -87,7 +87,7 @@ exports.signup = catchASync(async (req, res, next) => {
     zipCode,
     password,
     confirmPassword
-  });
+  })
 
   // const url = `${req.protocol}://${req.get('host')}/`
   const emailToken = signToken(newUser._id, '3d');

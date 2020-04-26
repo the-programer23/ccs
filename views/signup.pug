@@ -1,0 +1,250 @@
+extends base
+
+block content
+    main.main
+        .signup-login-form
+            h2.heading-secondary.ma-bt-lg ¡Hola! completa tus datos
+            form.form.form--signup
+                .form__group
+                    label.form__label(for='fullName') Nombre y apellidos:
+                    input#fullName.form__input(type='text', required)   
+                .form__group.ma-bt-md
+                    label.form__label(for='dateofbirth') Fecha de nacimiento:
+                    input#dateofbirth.form__input(type='date', required)
+                .form__group.ma-bt-md
+                    label.form__label(for='gender') Género:
+                    select(id="gender" class="form__input" name="gender" required)
+                        option(value="hombre") Hombre
+                        option(value="mujer") Mujer
+                .form__group.ma-bt-md
+                    label.form__label(for='nationality') Nacionalidad:
+                    select(id="nationality" class="form__input" name="nationality" required) 
+                        option(value="colombiano") Colombiano
+                        option(value='afghan') Afghan
+                        option(value='albanian') Albanian
+                        option(value='algerian') Algerian
+                        option(value='american') American
+                        option(value='andorran') Andorran
+                        option(value='angolan') Angolan
+                        option(value='antiguans') Antiguans
+                        option(value='argentinean') Argentino
+                        option(value='armenian') Armenian
+                        option(value='australian') Australian
+                        option(value='austrian') Austrian
+                        option(value='azerbaijani') Azerbaijani
+                        option(value='bahamian') Bahamian
+                        option(value='bahraini') Bahraini
+                        option(value='bangladeshi') Bangladeshi
+                        option(value='barbadian') Barbadian
+                        option(value='barbudans') Barbudans
+                        option(value='batswana') Batswana
+                        option(value='belarusian') Belarusian
+                        option(value='belgian') Belgian
+                        option(value='belizean') Belizean
+                        option(value='beninese') Beninese
+                        option(value='bhutanese') Bhutanese
+                        option(value='bolivian') Boliviano
+                        option(value='bosnian') Bosnian
+                        option(value='brazilian') Brazilian
+                        option(value='british') British
+                        option(value='bruneian') Bruneian
+                        option(value='bulgarian') Bulgarian
+                        option(value='burkinabe') Burkinabe
+                        option(value='burmese') Burmese
+                        option(value='burundian') Burundian
+                        option(value='cambodian') Cambodian
+                        option(value='cameroonian') Cameroonian
+                        option(value='canadian') Canadian
+                        option(value='cape verdean') Cape Verdean
+                        option(value='central african') Central African
+                        option(value='chadian') Chadian
+                        option(value='chilean') Chileno
+                        option(value='chinese') Chinese
+                        option(value='comoran') Comoran
+                        option(value='congolese') Congolese
+                        option(value='costa rican') Costa Rican
+                        option(value='croatian') Croatian
+                        option(value='cuban') Cuban
+                        option(value='cypriot') Cypriot
+                        option(value='czech') Czech
+                        option(value='danish') Danish
+                        option(value='djibouti') Djibouti
+                        option(value='dominican') Dominican
+                        option(value='dutch') Dutch
+                        option(value='east timorese') East Timorese
+                        option(value='ecuadorean') Ecuatoriano
+                        option(value='egyptian') Egyptian
+                        option(value='emirian') Emirian
+                        option(value='equatorial guinean') Equatorial Guinean
+                        option(value='eritrean') Eritrean
+                        option(value='estonian') Estonian
+                        option(value='ethiopian') Ethiopian
+                        option(value='fijian') Fijian
+                        option(value='filipino') Filipino
+                        option(value='finnish') Finnish
+                        option(value='french') French
+                        option(value='gabonese') Gabonese
+                        option(value='gambian') Gambian
+                        option(value='georgian') Georgian
+                        option(value='german') German
+                        option(value='ghanaian') Ghanaian
+                        option(value='greek') Greek
+                        option(value='grenadian') Grenadian
+                        option(value='guatemalan') Guatemalan
+                        option(value='guinea-bissauan') Guinea-Bissauan
+                        option(value='guinean') Guinean
+                        option(value='guyanese') Guyanese
+                        option(value='haitian') Haitian
+                        option(value='herzegovinian') Herzegovinian
+                        option(value='honduran') Hondureño
+                        option(value='hungarian') Hungarian
+                        option(value='icelander') Icelander
+                        option(value='indian') Indian
+                        option(value='indonesian') Indonesian
+                        option(value='iranian') Iranian
+                        option(value='iraqi') Iraqi
+                        option(value='irish') Irish
+                        option(value='israeli') Israeli
+                        option(value='italian') Italian
+                        option(value='ivorian') Ivorian
+                        option(value='jamaican') Jamaican
+                        option(value='japanese') Japanese
+                        option(value='jordanian') Jordanian
+                        option(value='kazakhstani') Kazakhstani
+                        option(value='kenyan') Kenyan
+                        option(value='kittian and nevisian') Kittian and Nevisian
+                        option(value='kuwaiti') Kuwaiti
+                        option(value='kyrgyz') Kyrgyz
+                        option(value='laotian') Laotian
+                        option(value='latvian') Latvian
+                        option(value='lebanese') Lebanese
+                        option(value='liberian') Liberian
+                        option(value='libyan') Libyan
+                        option(value='liechtensteiner') Liechtensteiner
+                        option(value='lithuanian') Lithuanian
+                        option(value='luxembourger') Luxembourger
+                        option(value='macedonian') Macedonian
+                        option(value='malagasy') Malagasy
+                        option(value='malawian') Malawian
+                        option(value='malaysian') Malaysian
+                        option(value='maldivan') Maldivan
+                        option(value='malian') Malian
+                        option(value='maltese') Maltese
+                        option(value='marshallese') Marshallese
+                        option(value='mauritanian') Mauritanian
+                        option(value='mauritian') Mauritian
+                        option(value='mexican') Mexicano
+                        option(value='micronesian') Micronesian
+                        option(value='moldovan') Moldovan
+                        option(value='monacan') Monacan
+                        option(value='mongolian') Mongolian
+                        option(value='moroccan') Moroccan
+                        option(value='mosotho') Mosotho
+                        option(value='motswana') Motswana
+                        option(value='mozambican') Mozambican
+                        option(value='namibian') Namibian
+                        option(value='nauruan') Nauruan
+                        option(value='nepalese') Nepalese
+                        option(value='new zealander') New Zealander
+                        option(value='ni-vanuatu') Ni-Vanuatu
+                        option(value='nicaraguan') Nicaraguan
+                        option(value='nigerien') Nigerien
+                        option(value='north korean') North Korean
+                        option(value='northern irish') Northern Irish
+                        option(value='norwegian') Norwegian
+                        option(value='omani') Omani
+                        option(value='pakistani') Pakistani
+                        option(value='palauan') Palauan
+                        option(value='panamanian') Panameño
+                        option(value='papua new guinean') Papua New Guinean
+                        option(value='paraguayan') Paraguayan
+                        option(value='peruvian') Peruano
+                        option(value='polish') Polish
+                        option(value='portuguese') Portuguese
+                        option(value='qatari') Qatari
+                        option(value='romanian') Romanian
+                        option(value='russian') Russian
+                        option(value='rwandan') Rwandan
+                        option(value='saint lucian') Saint Lucian
+                        option(value='salvadoran') Salvadoran
+                        option(value='samoan') Samoan
+                        option(value='san marinese') San Marinese
+                        option(value='sao tomean') Sao Tomean
+                        option(value='saudi') Saudi
+                        option(value='scottish') Scottish
+                        option(value='senegalese') Senegalese
+                        option(value='serbian') Serbian
+                        option(value='seychellois') Seychellois
+                        option(value='sierra leonean') Sierra Leonean
+                        option(value='singaporean') Singaporean
+                        option(value='slovakian') Slovakian
+                        option(value='slovenian') Slovenian
+                        option(value='solomon islander') Solomon Islander
+                        option(value='somali') Somali
+                        option(value='south african') South African
+                        option(value='south korean') South Korean
+                        option(value='spanish') Spanish
+                        option(value='sri lankan') Sri Lankan
+                        option(value='sudanese') Sudanese
+                        option(value='surinamer') Surinamer
+                        option(value='swazi') Swazi
+                        option(value='swedish') Swedish
+                        option(value='swiss') Swiss
+                        option(value='syrian') Syrian
+                        option(value='taiwanese') Taiwanese
+                        option(value='tajik') Tajik
+                        option(value='tanzanian') Tanzanian
+                        option(value='thai') Thai
+                        option(value='togolese') Togolese
+                        option(value='tongan') Tongan
+                        option(value='trinidadian or tobagonian') Trinidadian or Tobagonian
+                        option(value='tunisian') Tunisian
+                        option(value='turkish') Turkish
+                        option(value='tuvaluan') Tuvaluan
+                        option(value='ugandan') Ugandan
+                        option(value='ukrainian') Ukrainian
+                        option(value='uruguayan') Uruguayan
+                        option(value='uzbekistani') Uzbekistani
+                        option(value='venezuelan') Venezuelan
+                        option(value='vietnamese') Vietnamese
+                        option(value='welsh') Welsh
+                        option(value='yemenite') Yemenite
+                        option(value='zambian') Zambian
+                        option(value='zimbabwean') Zimbabwean       
+                .form__group
+                    label.form__label(for='citizenCardId') Número de documento de identidad:
+                    input#citizenCardId.form__input(type='number', required)
+                .form__group.ma-bt-md
+                    label.form__label(for='documentType') Típo de documento:
+                    select(id="documentType" class="form__input" name="documentType" required)
+                        option(value="Cédula") Cédula
+                        option(value="Pasaporte") Pasaporte
+                        option(value="Visa") Visa
+                .form__group.ma-bt-md
+                    label.form__label(for='citizenIdIssuedAt') Fecha de expedición de tu documento de identidad:
+                    input#citizenIdIssuedAt.form__input(type='date', required)
+                .form__group
+                    label.form__label(for='email') Email: 
+                    input#email.form__input(type='email', placeholder='tu@ejemplo.com', required)
+                .form__group
+                    label.form__label(for='phoneNumber') Número de celular: 
+                    input#phoneNumber.form__input(type='tel', required)  
+                .form__group.ma-bt-md
+                    label.form__label(for='homeAddress') Dirección de residencia: 
+                    input#homeAddress.form__input(type='text', required)  
+                .form__group.ma-bt-md
+                    label.form__label(for='zipCode') Código postal:
+                    input#zipCode.form__input(type='number', required)
+                .form__group
+                    label.form__label(for='password') Clave
+                    input#password.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                .form__group.ma-bt-md
+                    label.form__label(for='password') Confirme su clave
+                    input#confirmPassword.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                .form__group
+                    button.btn.btn--green Crear cuenta
+                <div class='tyc-layout'> Al registrarme, declaro que soy mayor de edad y acepto los <a target='_blank' href='#'> Términos y condiciones</a> de CSS</div>
+                        
+                        
+                               
+                            

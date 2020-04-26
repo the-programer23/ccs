@@ -1,0 +1,33 @@
+extends base
+
+mixin navItem(link, text, icon, active)
+  li(class=`${active ? 'side-nav--active' : ''}`)
+    a(href=`${link}`)
+      svg
+        use(xlink:href=`/img/icons.svg#icon-${icon}`)
+      | #{text}
+
+block content
+  main.main
+    .user-view
+      nav.user-view__menu
+        ul.side-nav
+          .admin-nav
+            ul.side-nav
+              +navItem('#', 'Mis datos', 'settings', true)
+              +navItem('#', 'Facturación', 'credit-card')
+      
+        - if(user.role === 'admin')  
+            h5.admin-nav__heading Administrador
+            +navItem('/admin', 'Inicio', 'home', true)
+            +navItem('/activeTours', 'Administrar tours', 'map')
+            +navItem('#', 'Administrar usuarios', 'users')
+            +navItem('#', 'Administrar opiniones', 'star')
+            +navItem('#', 'Administrar reservas', 'briefcase')
+            +navItem('/me', 'Sus datos', 'settings')
+      block accountBaseContent      
+              
+             
+      
+
+      

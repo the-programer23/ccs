@@ -1,0 +1,16 @@
+extends baseEmail
+block content
+  p Hola #{firstName},
+  p Bienvenido a DailyMoneey, nos alegra tenerte 🎉🙏
+  p Ahora solo debes confirmar que este es tu correo para asegurar tu cuenta, solo haz clic en el botón
+  table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+    tbody
+      tr
+        td(align='left')
+          table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+            tbody
+              tr
+                td
+                  a(href=`${url}`, target='_blank') Confirmar Cuenta
+  br                
+  p - Equipo DailyMoneey

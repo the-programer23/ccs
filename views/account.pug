@@ -1,0 +1,73 @@
+extends accountBase
+
+mixin accountData(title, userData, img)
+    -if(img)
+      div.mydata-second-container 
+        div.mydata-third-container
+          div.mydata-title #{title}
+          div.mydata-userdata
+            img.form__user-photo(src=`/img/users/${user.photo}`, alt=title id=userData)
+          
+    -if(!img)
+      div.mydata-second-container
+        div.mydata-third-container
+          div.mydata-title #{title}
+          div.mydata-userdata #{userData}   
+
+block accountBaseContent
+  .user-view__content
+    .user-view__form-container
+      h2.heading-secondary.ma-bt-md Mis datos
+      div.mydata-main-cotainer
+        +accountData('Foto de perfil', 'userPhoto', true)
+        +accountData('Nombres y apellidos', user.fullName)
+        +accountData('Email', user.email)
+        +accountData('Documento de identidad', user.citizenCardId)
+        +accountData('Tipo de documento', user.documentType)
+        +accountData('Número de movil', user.phoneNumber)
+        +accountData('Dirección de residencia', user.homeAddress)
+        .form__group.right
+          a.nav__el(id="showlogin") Modificar   
+
+      div(class='login-form-account' style="display: none;")   
+        .overlay
+        .content
+          button(id="closelogin"  style="float: right;") x
+          h3.heading-secondary.ma-bt-lg Para continuar ingresa tu clave
+          form.form.login-middleware
+            .form__group
+                label.form__label(for='email') Email 
+                input#loginMiddlewareEmail.form__input(type='email', placeholder='tu@ejemplo.com', required)
+            .form__group.ma-bt-md
+                label.form__label(for='password') Contraseña
+                input#loginMiddlewarePassword.form__input(type='password', placeholder='••••••••', required, minlength='8')
+            .form__group
+                button.btn.btn--green Continuar
+
+      .line &nbsp;
+      h2.heading-secondary.ma-bt-md Seguridad
+      
+      div(class="center" style="display: none;")
+        .overlay
+        .content
+          button(id="close"  style="float: right;") x
+          form.form.form-user-password
+            .form__group
+              label.form__label(for='password-current') Contraseña actual
+              input#password-current.form__input(type='password', placeholder='••••••••', required, minlength='8')
+            .form__group
+              label.form__label(for='password') Nueva contraseñas
+              input#password.form__input(type='password', placeholder='••••••••', required, minlength='8', autocomplete="none")
+            .form__group.ma-bt-lg
+              label.form__label(for='password-confirm') Confirmar contraseña
+              input#password-confirm.form__input(type='password', placeholder='••••••••', required, minlength='8', autocomplete="none")
+            .form__group.right
+              button.btn.btn--small.btn--green.btn--save-password Guardar contraseña
+      br
+      button(id="show" class="btn btn--small btn--green") Cambiar contraseña
+      br
+      br
+      
+
+
+            

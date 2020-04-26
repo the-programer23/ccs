@@ -1,0 +1,23 @@
+extends base
+mixin formData(id, label, type, value)   
+  .form__group
+    label.form__label(for=id) #{label}
+    input.form__input(type=type, id=id value=value, required, name=id)  
+    
+block content
+
+    div.mydata-main-cotainer                         
+        form.form.form-user-data
+            +formData('fullName', 'Nombres y apellidos', 'text', `${user.fullName}`)
+            +formData('email', 'Correo electrónico', 'email', `${user.email}`)
+            +formData('phoneNumber', 'Número de movil', 'number', `${user.phoneNumber}`)
+            +formData('homeAddress', 'Dirección de residencia', 'text', `${user.homeAddress}`)
+        
+            .form__group
+                img.form__user-photo(src=`/img/users/${user.photo}`, alt='User photo' id="userPhoto")
+                // this input allow us to upload imagenes, the name attribute is photo because its 
+                // the name of the field in the User document and it's use by multer
+                label(for='photo' class="form__label") Actualizar foto
+                input.form_upload(type='file', accept='image/*', id='photo', name='photo' class='form__photo__button')
+            .form__group.right
+                button.btn.btn--small.btn--green Guardar cambios

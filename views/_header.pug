@@ -1,0 +1,16 @@
+header.header    
+    
+    //- a(href='/' class='logo_link')
+    //-     img(src='/img/logo.png' class='logo')
+        //- p.logoDailymoneey DM
+    //- nav.nav.nav--tours
+        //- a.nav__el(href=`/chat/?email=${user.email}`) Chat
+    nav.nav.nav--user
+        if user 
+            a.nav__el.nav__el--logout Salir
+            a.nav__el(href=`/me`)
+                img.nav__user-img(src=`/img/users/${user.photo}` alt=`Foto de ${user.firstName}`)
+                span= user.firstName
+        else    
+            a.nav__el(href='/login') Ingresa
+            a.nav__el.nav__el--cta(href='/signup') Crea tu cuenta

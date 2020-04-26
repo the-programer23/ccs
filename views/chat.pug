@@ -1,0 +1,28 @@
+extends base
+
+block content
+    p(id='userName' hidden)= userName
+   
+
+        
+    main.main
+        .chat   
+            .chat__sidebar
+                div(id='usersList' class='sidebartemplate')
+                    h2.room-title DailyMoneey Miembros VIP
+                    ul.ul-users-list.usersUl
+                       
+                            
+                    
+                    
+                        
+            .chat__main
+                div(id='messages' class='chat__messages')
+                div.compose
+                    form.chatForm
+                            input(type='text', name='message' required placeholder='Mensaje' class='chat_input', autocomplete='off')
+                            button.chat_button Enviar
+                    button(id='send-location' class="chat_button") Ubicación      
+
+
+        
